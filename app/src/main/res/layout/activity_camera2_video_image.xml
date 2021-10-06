@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#48DCD7D7"
+    tools:context=".Camera2VideoImageActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/relativemain">
+
+
+        <TextureView
+            android:id="@+id/textureView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp">
+        </TextureView>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/op"/>
+
+        <TextView
+            android:id="@+id/location_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="10dp"
+            android:text="Heading: 0.0"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:text="Heading: 0.0"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageViewCompass"
+            android:layout_width="match_parent"
+            android:layout_height="245dp"
+            android:layout_below="@+id/tvHeading"
+            android:layout_alignBottom="@+id/textureView"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="99dp"
+            android:layout_marginTop="191dp"
+            android:layout_marginEnd="96dp"
+            android:layout_marginBottom="237dp"
+            android:alpha="0.8"
+            android:visibility="gone"
+            android:src="@drawable/imgcompassmodified" />
+        <ImageView
+            android:id="@+id/i1"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="199dp"
+        android:layout_marginEnd="20dp"
+        android:visibility="gone"
+        android:layout_marginBottom="264dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/anim_img"
+            android:layout_width="45dp"
+            android:layout_height="35dp"
+            android:layout_margin="8dp"
+            app:srcCompat="@drawable/ic_animation" />
+
+        <ImageView
+            android:id="@+id/colorPicker_img"
+            android:layout_width="45dp"
+            android:layout_height="35dp"
+            android:layout_margin="8dp"
+            app:srcCompat="@drawable/ic_colorize" />
+
+        <ImageView
+            android:id="@+id/rotate"
+            android:layout_width="45dp"
+            android:layout_height="35dp"
+            android:layout_margin="8dp"
+            app:srcCompat="@drawable/ic_rotate" />
+
+        <ImageView
+            android:id="@+id/blurr_img"
+            android:layout_width="45dp"
+            android:layout_height="35dp"
+            android:layout_margin="8dp"
+            app:srcCompat="@drawable/ic_blur" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/videoOnlineImageButton"
+        android:layout_width="61dp"
+        android:layout_height="59dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="127dp"
+        android:layout_marginBottom="5dp"
+        android:contentDescription="@string/video_button"
+        android:src="@mipmap/btnvdoonline" />
+
+    <ImageButton
+        android:id="@+id/cameraImageButton2"
+        android:layout_width="69dp"
+        android:layout_height="59dp"
+        android:layout_alignTop="@+id/videoOnlineImageButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="111dp"
+        android:contentDescription="@string/camera_button"
+        android:src="@mipmap/btncamera" />
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/videoOnlineImageButton"
+        android:layout_alignStart="@+id/videoOnlineImageButton"
+        android:textColor="#ff0000"
+        android:textSize="25dp"
+        android:visibility="invisible" />
+
+</RelativeLayout>
